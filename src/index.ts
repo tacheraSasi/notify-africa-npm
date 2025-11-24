@@ -1,3 +1,4 @@
+import { SendSingleResponse, SendSingleRequest, SendBatchResponse, SendBatchRequest, MessageStatusResponse } from "./types";
 
 
 export class NotifyAfricaSMS {
