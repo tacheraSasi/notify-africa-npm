@@ -40,7 +40,7 @@ const notifyAfrica = new NotifyAfrica(
 async function run() {
   // Send a single message
   const single = await notifyAfrica.sendSingleMessage(
-    "255689737459",
+    "255123456789",
     "Hello from API Management endpoint!",
     "137"
   );
@@ -48,7 +48,7 @@ async function run() {
 
   // Send a batch
   const batch = await notifyAfrica.sendBatchMessages(
-    ["255763765548", "255689737839"],
+    ["255123456789", "255123456789"],
     "test",
     "137"
   );
@@ -77,18 +77,18 @@ sendSingle();
 async function sendBatch() {
   try {
     const response = await client.sendBatchMessages(
-      ['255763765548', '255689737839'], // Array of phone numbers
-      'Test batch message', // Message
-      '137' // Sender ID
+      ["255123456789", "255123456789"], // Array of phone numbers
+      "Test batch message", // Message
+      "137" // Sender ID
     );
-    console.log('Batch messages sent:', response); // { messageCount: 2, creditsDeducted: 2, remainingBalance: 1475 }
+    console.log("Batch messages sent:", response); // { messageCount: 2, creditsDeducted: 2, remainingBalance: 1475 }
   } catch (error) {
-    console.error('Error:', error.message);
+    console.error("Error:", error.message);
   }
 }
 
 sendBatch();
-````
+```
 
 ### Check Message Status
 
@@ -166,14 +166,14 @@ export class SmsService {
 
 ## Development
 
-- Clone the repo: `git clone https://github.com/tacherasasi/notify-africa.git`
+- Clone the repo: `git clone https://github.com/tacheraSasi/notify-africa-npm.git`
 - Install dependencies: `npm install`
 - Build: `npm run build`
 - Test: `npm run test`
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request on [GitHub](https://github.com/tacherasasi/notify-africa).
+Contributions are welcome! Please open an issue or submit a pull request on [GitHub](https://github.com/tacheraSasi/notify-africa-npm.git).
 
 ## License
 
@@ -183,4 +183,4 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 For API-related questions, visit the [Notify Africa Developers Portal](https://notify.africa/developers).
 
-Author: Tachera Sasi <tacherasasi@gmail.com> (https://tachera.ekilie.com)
+Author: Tachera Sasi <tacherasasi@gmail.com> (<https://tachera.ekilie.com>)
